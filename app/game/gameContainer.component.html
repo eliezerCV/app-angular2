@@ -1,0 +1,9 @@
+<div class="container" style="margin-top: 50px;">
+    <div class="container" style="width:800px;">
+        <div *ngFor="let game of games">
+            <a [routerLink]="['/gamePosted',game._id]" (click)="ClickedGame(game._id)"><img src="app/styles/img/indiegame.jpg" alt='Name' height="100" width="130"></a>
+            <h4><a [routerLink]="['/gamePosted',game._id]">{{game.title}} </a></h4>
+        </div>
+        <div *ngIf="!this.games"> No se encontraron juegos publicados</div>
+    </div>
+</div>

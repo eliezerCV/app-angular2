@@ -1,0 +1,35 @@
+<!--<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" [routerLink]="['/home']">Game Ready</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Buscar">
+        </div>
+        <button type="submit" class="btn btn-default">Buscar</button>
+      </form>
+
+      <nav *ngIf="currentUser" class="nav navbar-nav navbar-right" id="primary_nav_wrap">
+          <ul>
+            <li><a>{{currentUser.name}}</a>
+                <ul>
+                  <li><a href="">Perfil</a></li>
+                  <li><a href="">Cuenta</a></li>
+                  <li (click)="logout()"><a>Cerrar Sesion</a></li>
+                </ul>
+            </li>
+          </ul>
+      </nav>
+     <ul *ngIf="!currentUser" class="nav navbar-nav navbar-right">   
+        <li><a class="navbar-brand" [routerLink]="['/userLogin']">Iniciar Sesion</a></li> 
+        <li><a class="navbar-brand" [routerLink]="['/userRegister']">Registro</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+-->

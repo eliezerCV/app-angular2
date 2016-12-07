@@ -1,0 +1,43 @@
+<div *ngIf="this.router.url === '/home'">
+     <game-container (onClickedGame) = "getIdGame($event)"></game-container>
+</div>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+
+    <div class="navbar-header">
+      <a class="navbar-brand" [routerLink]="['/home']">Game Ready</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <div *ngIf="this.router.url === '/home'">
+        <form class="navbar-form navbar-left" role="search">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Buscar">
+          </div>
+          <button type="submit" class="btn btn-default">Buscar</button>
+        </form>
+      </div>
+
+      <div> 
+          <sud></sud>
+      </div>
+      
+    </div>
+  </div>
+</nav>
+<div *ngIf="this.router.url != '/home'">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-3 col-md-2 sidebar">
+        <ul class="nav nav-sidebar">
+          <li><a [routerLink]="['/userProfile']">Mi Perfil</a></li>
+          <li><a [routerLink]="['/userAccount']">Mi Cuenta</a></li>
+          <li><a [routerLink]="['/userGames']">Juegos Publicados</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="this.router.url == '/home'">
+      <filter-category></filter-category>
+</div>
